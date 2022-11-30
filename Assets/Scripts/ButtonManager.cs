@@ -5,21 +5,21 @@ using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
-
+Answer answer;
 namespace Lambdas{
 public class ButtonManager : MonoBehaviour
 {
 
 static void Main(string[] args){
-  var answers = new List<Answer> {
-    new Answer{ Answer = "365", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Correct"},
-    new Answer{ Answer = "300", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
-    new Answer{ Answer = "251", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
-    new Answer{ Answer = "370", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"}
+  var answers = new List<answer> {
+    new answer{ Answer = "365", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Correct"},
+    new answer{ Answer = "300", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
+    new answer{ Answer = "251", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
+    new answer{ Answer = "370", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"}
 };
 
 
-  public void ButtonMoveScene(string level)
+void ButtonMoveScene(string level)
     {
         SceneManager.LoadScene(level);
     }
