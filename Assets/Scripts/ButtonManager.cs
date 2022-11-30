@@ -13,24 +13,23 @@ namespace Lambdas
 public class ButtonManager : MonoBehaviour
 {
 
-class Questions{
-string Answer;
-string Question; 
-bool Correct; 
-public Answer(string ans, string ques, bool cor){
+public class Questions{
+public string Answer;
+public string Question; 
+public bool Correct; 
+public void Answer(string ans, string ques, bool cor){
 Answer = ans;
 Question = ques; 
 Correct = cor;
 
+list<answer> listAnswersQuiz = new List<answer>();
+listAnswersQuiz.Add(new answer("365","Hoeveel huizen staan er op de maquette?", "True"));
+listAnswersQuiz.Add(new answer("300","Hoeveel huizen staan er op de maquette?", "False"));
+listAnswersQuiz.Add(new answer("251","Hoeveel huizen staan er op de maquette?", "False"));
+listAnswersQuiz.Add(new answer("270","Hoeveel huizen staan er op de maquette?", "False"));
 }
 }
-public class answer {
-  static int answers = new List<answer> {
-    new answer{"driehonderdvijfenzestig","Hoeveel huizen staan er op de maquette?", "Correct"},
-    new answer{"driehonderd","Hoeveel huizen staan er op de maquette?","Incorrect"},
-    new answer{"tweehonderdeenenvijftig", "Hoeveel huizen staan er op de maquette?", "Incorrect"},
-    new answer{"driehonderdzeventig", "Hoeveel huizen staan er op de maquette?", "Incorrect"}
-};
+
 
 
 
@@ -51,6 +50,5 @@ void ButtonMoveScene(string level)
     }
 
 
-}
 }
 }
