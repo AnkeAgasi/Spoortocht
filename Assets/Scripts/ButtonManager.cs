@@ -7,21 +7,31 @@ using UnityEngine.SceneManagement;
 
 
 
+
 namespace Lambdas
 {
 public class ButtonManager : MonoBehaviour
 {
 
+class Questions{
 string Answer;
 string Question; 
-string Correct; 
+bool Correct; 
+public Answer(string ans, string ques, bool cor){
+Answer = ans;
+Question = ques; 
+Correct = cor;
+
+}
+}
 public class answer {
   static int answers = new List<answer> {
-    new answer{ Answer = "365", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Correct"},
-    new answer{ Answer = "300", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
-    new answer{ Answer = "251", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
-    new answer{ Answer = "370", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"}
+    new answer{"driehonderdvijfenzestig","Hoeveel huizen staan er op de maquette?", "Correct"},
+    new answer{"driehonderd","Hoeveel huizen staan er op de maquette?","Incorrect"},
+    new answer{"tweehonderdeenenvijftig", "Hoeveel huizen staan er op de maquette?", "Incorrect"},
+    new answer{"driehonderdzeventig", "Hoeveel huizen staan er op de maquette?", "Incorrect"}
 };
+
 
 
 void ButtonMoveScene(string level)
