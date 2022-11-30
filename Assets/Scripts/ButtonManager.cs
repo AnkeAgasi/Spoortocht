@@ -5,13 +5,18 @@ using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
-Answer answer;
-namespace Lambdas{
+
+
+namespace Lambdas
+{
 public class ButtonManager : MonoBehaviour
 {
 
-static void Main(string[] args){
-  var answers = new List<answer> {
+string Answer;
+string Question; 
+string Correct; 
+public class answer {
+  static int answers = new List<answer> {
     new answer{ Answer = "365", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Correct"},
     new answer{ Answer = "300", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
     new answer{ Answer = "251", Question = "Hoeveel huizen staan er op de maquette?", Correct = "Incorrect"},
