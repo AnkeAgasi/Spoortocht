@@ -12,6 +12,7 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private string questionText;
     [SerializeField] private TextMeshProUGUI questionTextComponent;
 
+public Answer Antwoord1;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class QuizManager : MonoBehaviour
     public void MoveScene(string level)
     {
         if (!onlyMoveSceneIfAnswersAreCorrect)
+        // && hasGivenAnswer == true)
         {
             SceneManager.LoadScene(level);
         }
@@ -29,7 +31,7 @@ public class QuizManager : MonoBehaviour
         {
             int correctAnswersGiven = 0;
 
-            if (AnswersGiven.Count > 0)
+            if (AnswersGiven.Count != 0)
             {
                 foreach(Answer answer in AnswersGiven)
                 {

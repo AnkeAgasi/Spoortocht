@@ -13,11 +13,15 @@ public class Answer : MonoBehaviour
     public bool IsCorrect { get { return isCorrect; } }
     [SerializeField] private bool isCorrect;
 
+ [SerializeField] public bool hasGivenAnswer;
     public int index;
+
+    Button button;
 
 
     private void Awake()
     {
+
         index = SceneManager.GetActiveScene().buildIndex;
         textComponent = GetComponentInChildren<TextMeshProUGUI>(); // Return the text under the GameObject
     }
@@ -25,7 +29,13 @@ public class Answer : MonoBehaviour
     private void Start()
     {
         textComponent.text = answerText;
+                hasGivenAnswer = false;
     }
+
+ public void hasGivenAnswerTrue(){
+hasGivenAnswer = true;
+ }
+
 
     public void GiveQuizManagerData()
     {

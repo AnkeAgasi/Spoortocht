@@ -294,7 +294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72.731, y: 340.5}
+  m_AnchoredPosition: {x: -98.164, y: 397.03}
   m_SizeDelta: {x: 33.7087, y: 33.7087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244382331
@@ -828,6 +828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 439254728}
+  - component: {fileID: 439254729}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -853,7 +854,6 @@ RectTransform:
   - {fileID: 1666928733}
   - {fileID: 244382330}
   - {fileID: 1780097647}
-  - {fileID: 880862495}
   - {fileID: 1746637208}
   - {fileID: 1423989992}
   - {fileID: 895788626}
@@ -865,6 +865,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -167.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &439254729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439254727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf86504fa888244fa4beae95e067ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1144,7 @@ GameObject:
   - component: {fileID: 880862496}
   - component: {fileID: 880862499}
   m_Layer: 5
-  m_Name: Antwoord2
+  m_Name: Optie b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1151,12 +1163,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1657899720}
-  m_Father: {fileID: 439254728}
-  m_RootOrder: 6
+  m_Father: {fileID: 1780097647}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.45, y: 120.92}
+  m_AnchoredPosition: {x: 179.25006, y: 7.5}
   m_SizeDelta: {x: 115.02, y: 25.4484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880862496
@@ -1206,18 +1218,6 @@ MonoBehaviour:
       - m_Target: {fileID: 880862499}
         m_TargetAssemblyTypeName: Answer, Assembly-CSharp
         m_MethodName: GiveQuizManagerData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 880862499}
-        m_TargetAssemblyTypeName: Answer, Assembly-CSharp
-        m_MethodName: hasGivenAnswerTrue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1279,7 +1279,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerText: 270
   isCorrect: 0
-  hasGivenAnswer: 0
   index: 0
 --- !u!1 &895788625
 GameObject:
@@ -1312,7 +1311,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 439254728}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -1591,7 +1590,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Puzzel 2
+          m_StringArgument: Cutscene 2
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1186888745
@@ -1645,7 +1644,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1641561729}
-  - {fileID: 1606183597}
   m_Father: {fileID: 439254728}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1666,10 +1664,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c592a311b1fe07f46b7f6950179b3b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onlyMoveSceneIfAnswersAreCorrect: 0
+  onlyMoveSceneIfAnswersAreCorrect: 1
   questionText: Hoeveel huizen staan er op de miniatuur kaart?
   questionTextComponent: {fileID: 895788627}
-  Antwoord1: {fileID: 0}
 --- !u!1 &1423989991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1681,7 @@ GameObject:
   - component: {fileID: 1423989993}
   - component: {fileID: 1423989996}
   m_Layer: 5
-  m_Name: Antwoord4
+  m_Name: Optie d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1704,7 +1701,7 @@ RectTransform:
   m_Children:
   - {fileID: 221310486}
   m_Father: {fileID: 439254728}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1767,18 +1764,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1423989996}
-        m_TargetAssemblyTypeName: Answer, Assembly-CSharp
-        m_MethodName: hasGivenAnswerTrue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1423989994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,7 +1816,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerText: 198
   isCorrect: 0
-  hasGivenAnswer: 0
   index: 0
 --- !u!1 &1585096117
 GameObject:
@@ -2036,37 +2020,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589221127}
   m_CullTransparentMesh: 1
---- !u!1 &1606183596
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1606183597}
-  m_Layer: 0
-  m_Name: QuizManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1606183597
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606183596}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.198927, y: 140.79047, z: -4.275207}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1186888747}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641561728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,7 +2458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.7, y: 340.5}
+  m_AnchoredPosition: {x: -155, y: 428}
   m_SizeDelta: {x: 28.23, y: 28.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1746637207
@@ -2522,7 +2475,7 @@ GameObject:
   - component: {fileID: 1746637209}
   - component: {fileID: 1746637212}
   m_Layer: 5
-  m_Name: Antwoord3
+  m_Name: Optie c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2542,7 +2495,7 @@ RectTransform:
   m_Children:
   - {fileID: 418273199}
   m_Father: {fileID: 439254728}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2605,18 +2558,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1746637212}
-        m_TargetAssemblyTypeName: Answer, Assembly-CSharp
-        m_MethodName: hasGivenAnswerTrue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1746637210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2669,7 +2610,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerText: 365
   isCorrect: 1
-  hasGivenAnswer: 0
   index: 0
 --- !u!1 &1780097646
 GameObject:
@@ -2685,7 +2625,7 @@ GameObject:
   - component: {fileID: 1780097648}
   - component: {fileID: 1780097651}
   m_Layer: 5
-  m_Name: Antwoord1
+  m_Name: Optie a
   m_TagString: Correct
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2704,6 +2644,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1589221128}
+  - {fileID: 880862495}
   m_Father: {fileID: 439254728}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2768,18 +2709,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1780097651}
-        m_TargetAssemblyTypeName: Answer, Assembly-CSharp
-        m_MethodName: hasGivenAnswerTrue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1780097649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2832,7 +2761,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerText: 300
   isCorrect: 0
-  hasGivenAnswer: 0
   index: 0
 --- !u!1 &1874035181
 GameObject:
@@ -2846,7 +2774,7 @@ GameObject:
   - component: {fileID: 1874035184}
   - component: {fileID: 1874035183}
   m_Layer: 5
-  m_Name: Zilverwezentje
+  m_Name: Plumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
