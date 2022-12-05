@@ -11,18 +11,20 @@ public class QuizManager : MonoBehaviour
 
     [SerializeField] private string questionText;
     [SerializeField] private TextMeshProUGUI questionTextComponent;
-
-public Answer Antwoord1;
+ [SerializeField] public bool hasGivenAnswer;
 
     private void Awake()
     {
         questionTextComponent.text = questionText;
+          hasGivenAnswer = false;
     }
 
+     public void hasGivenAnswerTrue(){
+        hasGivenAnswer = true;
+     }
     public void MoveScene(string level)
     {
-        if (!onlyMoveSceneIfAnswersAreCorrect)
-        // && hasGivenAnswer == true)
+        if (!onlyMoveSceneIfAnswersAreCorrect && hasGivenAnswer == true)
         {
             SceneManager.LoadScene(level);
         }
