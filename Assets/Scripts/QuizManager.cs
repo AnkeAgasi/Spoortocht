@@ -12,6 +12,7 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private string questionText;
     [SerializeField] private TextMeshProUGUI questionTextComponent;
  [SerializeField] public bool hasGivenAnswer;
+ [SerializeField] private GameObject ErrorText;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class QuizManager : MonoBehaviour
         {
             int correctAnswersGiven = 0;
 
-            if (AnswersGiven.Count != 0)
+            if (AnswersGiven.Count != 0 && hasGivenAnswer == true)
             {
                 foreach(Answer answer in AnswersGiven)
                 {
@@ -46,6 +47,9 @@ public class QuizManager : MonoBehaviour
             {
                 AnswersGiven.Clear();
                 SceneManager.LoadScene(level);
+            }
+            else{
+                ErrorText.SetActive(true);
             }
         }
     }

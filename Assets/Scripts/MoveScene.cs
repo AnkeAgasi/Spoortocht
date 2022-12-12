@@ -7,7 +7,7 @@ public class MoveScene : MonoBehaviour
    
 
 
-void ButtonMoveScene(string level)
+public void ButtonMoveScene(string level)
     {
         SceneManager.LoadScene(level);
     }
