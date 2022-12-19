@@ -811,7 +811,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Puzzel 1
+          m_StringArgument: Uitleg
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1186888745
@@ -1194,6 +1194,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -198.70001, y: 0.0000048876}
+  m_AnchoredPosition: {x: -202, y: 0.0000048876}
   m_SizeDelta: {x: 183.62701, y: 183.627}
   m_Pivot: {x: 0.5, y: 0.5}
